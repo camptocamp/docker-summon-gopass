@@ -5,6 +5,7 @@ ENV \
 	GOPASS_VERSION=1.9.2 \
 	SUMMON_PROVIDER=/usr/local/bin/summon-gopass
 
+RUN apk add gnupg
 RUN wget https://github.com/cyberark/summon/releases/download/v${SUMMON_VERSION}/summon-linux-amd64.tar.gz -qO - | tar xz summon -O > /usr/local/bin/summon
 RUN chmod +x /usr/local/bin/summon
 RUN wget https://github.com/gopasspw/gopass/releases/download/v${GOPASS_VERSION}/gopass-${GOPASS_VERSION}-linux-amd64.tar.gz -qO - | tar xz gopass -O > /usr/local/bin/gopass
