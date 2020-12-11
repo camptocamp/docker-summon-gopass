@@ -1,7 +1,7 @@
 FROM alpine
 
 ENV \
-	SUMMON_VERSION=0.8.2 \
+	SUMMON_VERSION=0.8.3 \
 	GOPASS_VERSION=1.9.2 \
 	SUMMON_PROVIDER=/usr/local/bin/summon-gopass
 
