@@ -5,7 +5,7 @@ ENV \
 	GOPASS_VERSION=1.9.2 \
 	SUMMON_PROVIDER=/usr/local/bin/summon-gopass
 
-RUN apk add bash git gnupg
+RUN apk add bash git gnupg openssh-client
 # RUN wget https://github.com/cyberark/summon/releases/download/v${SUMMON_VERSION}/summon-linux-amd64.tar.gz -qO - | tar xz summon -O > /usr/local/bin/summon
 RUN wget https://github.com/mcanevet/summon/releases/download/quote-envfile/summon-linux-amd64.tar.gz -qO - | tar xz summon -O > /usr/local/bin/summon
 RUN chmod +x /usr/local/bin/summon
